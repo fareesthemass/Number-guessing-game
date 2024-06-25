@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+
+</head>
+
+<body>
+
+
+
+    <script>
+
+
+
+        var random = Math.floor(Math.random() * 10 + 1)
+        console.log(random)
+
+        count = 0
+
+        function guessgame() {
+
+            while (true) {
+                name = prompt('Guess the number between 1 to 10')
+
+                if (name == random) {
+                    count = count + 1
+                    alert('Congratulation Your Guessed the correct number ' + random + ' at ' + count + ' times')
+                    break
+                }
+
+                else if (name > random) {
+                    count = count + 1
+                    alert('Too High. Try again')
+                }
+
+                else if (name < random) {
+                    count = count + 1
+                    alert('Too Low. Try again')
+                }
+            }
+        }
+
+        guessgame()
+    </script>
+</body>
+
+</html>
+
